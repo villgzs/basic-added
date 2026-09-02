@@ -20,7 +20,7 @@ USE AT YOUR OWN RISK.
 
 # Home Assistant Core Base Image - for arm 32bit platforms
 
-Home Assistant Core base image built on top of [`ghcr.io/villgzs/basic-python`](https://github.com/villgzs).
+Home Assistant Core base image built on top of [https://github.com/villgzs/basic-python](https://github.com/villgzs/basic-python).
 
 Includes:
 
