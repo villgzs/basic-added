@@ -17,3 +17,69 @@ USE AT YOUR OWN RISK.
 ---
 
 ### STEP No.3
+
+# Home Assistant Core Base Image - for arm 32bit platforms
+
+Home Assistant Core base image built on top of [`ghcr.io/villgzs/basic-python`](https://github.com/villgzs).
+
+Includes:
+
+- ssocr
+- libcec (+ Python bindings)
+- PicoTTS
+- Telldus core
+- Common HA system packages (bluez, ffmpeg, mariadb, postgresql, etc.)
+- Python dependencies from `requirements.txt`
+
+## Base image
+
+```dockerfile
+FROM ghcr.io/villgzs/basic-python:latest
+```
+
+You can override the base tag via build-arg or the GitHub Actions manual trigger.
+
+## Supported platforms
+
+- `linux/arm/v7`
+- `linux/arm/v6`
+
+## Required files
+
+| File / Directory       | Description                                      |
+|------------------------|--------------------------------------------------|
+| `requirements.txt`     | Python packages to install                       |
+| `patches/`             | Telldus patches (already included as placeholders) |
+| `rootfs/`              | Extra files copied into the final image root     |
+
+## Quick start
+
+### Local build
+
+```bash
+docker buildx build \
+  --platform linux/arm/v7 \
+  --build-arg BASE_VERSION=latest \
+  -t ha-core-base:local \
+  --load \
+  .
+```
+
+### GitHub Actions
+
+The included workflow (`.github/workflows/docker-build.yml`) automatically builds and pushes to GHCR on push to `main`/`master` or on tags.
+
+Manual trigger allows selecting platforms and base image tag.
+
+## Build arguments
+
+| Argument       | Default                          | Description                |
+|----------------|----------------------------------|----------------------------|
+| `BASE_IMAGE`   | `ghcr.io/villgzs/basic-python`   | Base image repository      |
+| `BASE_VERSION` | `latest`                         | Base image tag             |
+
+## Notes
+
+- Multi-stage build with BuildKit cache mounts for faster rebuilds.
+- Telldus requires the three patch files in `patches/`.
+- `requirements.txt` must exist (even if empty) because it is bind-mounted during the build.
