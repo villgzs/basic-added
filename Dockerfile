@@ -1,4 +1,4 @@
-ARG BUILD_FROM=dockergzs/base-python:3.14-alpine3.24-armv7
+ARG BUILD_FROM=ghcr.io/villgzs/basic-python:latest
 ####
 ## Builder stage for ssocr, installs to /opt/ssocr
 FROM ${BUILD_FROM} AS ssocr-builder
