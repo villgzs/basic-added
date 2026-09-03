@@ -16,6 +16,8 @@
 USE AT YOUR OWN RISK.
 ---
 
+Prereq.: STEP No.2 (Basic-Python)
+
 ### STEP No.3
 
 # Home Assistant Core Base Image - for arm 32bit platforms
