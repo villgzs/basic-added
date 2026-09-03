@@ -1,4 +1,4 @@
-[Official release is here: https://github.com/home-assistant/docker/releases/tag/2026.07.0](https://github.com/home-assistant/docker/releases/tag/2026.07.0)
+[Official release is here: https://github.com/home-assistant/docker/releases/tag/2026.07.0](https://github.com/home-assistant/docker/pkgs/container/homeassistant-base/985398239?tag=2026.07.0)
 
 # THIS IS NOT OFFICIAL RELEASE !
 
