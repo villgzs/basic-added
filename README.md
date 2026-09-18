@@ -18,6 +18,8 @@ USE AT YOUR OWN RISK.
 
 Prereq.: STEP No.2 (Basic-Python)
 
+#### [Home-assistant/docker - actions for releases](https://github.com/home-assistant/docker/actions?query=event%3Arelease)
+
 ### STEP No.3
 
 # Home Assistant Core Base Image - for arm 32bit platforms
