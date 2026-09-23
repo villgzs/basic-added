@@ -59,12 +59,8 @@ jobs:
           file: ./Dockerfile
           platforms: linux/arm/v7
           outputs: type=image,name=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=${{ github.event_name != 'pull_request' && (github.event_name != 'workflow_dispatch' || inputs.push) }}
-          cache-from: type=gha,scope=armv7
-          cache-to: type=gha,mode=max,scope=armv7
           provenance: true
-          sbom: true
-          build-args: |
-            BUILDKIT_INLINE_CACHE=1
+          sbom: true          
 
       - name: Export digest
         run: |
@@ -116,12 +112,8 @@ jobs:
           file: ./Dockerfile
           platforms: linux/arm/v6
           outputs: type=image,name=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=${{ github.event_name != 'pull_request' && (github.event_name != 'workflow_dispatch' || inputs.push) }}
-          cache-from: type=gha,scope=armv6
-          cache-to: type=gha,mode=max,scope=armv6
           provenance: true
-          sbom: true
-          build-args: |
-            BUILDKIT_INLINE_CACHE=1
+          sbom: true          
 
       - name: Export digest
         run: |
