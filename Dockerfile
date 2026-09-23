@@ -164,7 +164,7 @@ RUN \
     --mount=type=bind,src=./requirements.txt,dst=/tmp/requirements.txt \
     --mount=type=cache,target=/root/.cache/pip,sharing=locked,id=pip-cache-${BUILD_FROM} \
     pip3 install --only-binary=:all: \
-        --no-binary=Brotli,faust-cchardet,mysqlclient,psycopg2 \
+        # --no-binary=Brotli,faust-cchardet,mysqlclient,psycopg2 \
         -r /tmp/requirements.txt
         
 # Eltávolítjuk a fordításhoz használt átmeneti csomagokat, hogy tiszta maradjon az image
