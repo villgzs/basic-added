@@ -1,5 +1,6 @@
 [Official release is here: https://github.com/home-assistant/docker/releases/tag/2026.07.0](https://github.com/home-assistant/docker/pkgs/container/homeassistant-base/985398239?tag=2026.07.0)
-```ARG BUILD_FROM=ghcr.io/home-assistant/base-python:3.14-alpine3.24-2026.06.1
+```
+ARG BUILD_FROM=ghcr.io/home-assistant/base-python:3.14-alpine3.24-2026.06.1
 ```
 
 # THIS IS NOT OFFICIAL RELEASE !
