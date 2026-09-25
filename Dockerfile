@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/villgzs/basic-python:latest
+ARG BUILD_FROM=ghcr.io/villgzs/basic-python:2026.06.1
 ####
 ## Builder stage for ssocr, installs to /opt/ssocr
 FROM ${BUILD_FROM} AS ssocr-builder
