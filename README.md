@@ -22,6 +22,8 @@ Prereq.: STEP No.2 (Basic-Python)
 
 ### STEP No.3
 
+```ARG BUILD_FROM=ghcr.io/home-assistant/base-python:3.14-alpine3.24-2026.06.1```
+
 # Home Assistant Core Base Image - for arm 32bit platforms
 
 Home Assistant Core base image built on top of [https://github.com/villgzs/basic-python](https://github.com/villgzs/basic-python).
